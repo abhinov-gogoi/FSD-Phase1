@@ -1,9 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Welcome welcomeScreen = new Welcome();
-        welcomeScreen.showWelcome();
+        Welcome.showWelcome();
 
-        Menu menu = new Menu();
-        menu.primaryMenu();
+        PrimaryMenu primaryMenu = new PrimaryMenu();
+        primaryMenu.showMenu();
     }
 }

@@ -1,5 +1,5 @@
 public class Welcome {
-    public void showWelcome() {
+    public static void showWelcome() {
         System.out.println(
                 "**************************************\n"+
                 "************ Welcome to **************\n"+
