@@ -118,7 +118,7 @@ public class Menu {
 
             switch (option) {
                 case 'Y' -> {
-                    System.out.println("Thank You for using LockedMe.com");
+                    Welcome.thankYou();
                     System.exit(0);
                 }
                 case 'N' -> {
