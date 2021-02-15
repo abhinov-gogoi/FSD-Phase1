@@ -10,7 +10,7 @@ public class PrimaryMenu {
                 "3 -> Exit");
     }
 
-    void showMenu() {
+    int showMenu() {
         showPrompt();
 
         try{
@@ -18,17 +18,23 @@ public class PrimaryMenu {
             int option = scanner.nextInt();
 
             switch (option){
-                case 1 -> System.out.println("Option 1 Selected\n");
-                case 2 -> System.out.println("Option 2 Selected\n");
-                case 3 -> System.out.println("Option 3 Selected\n");
-                default -> showPrompt();
+                case 1 -> {
+                    System.out.println("Option 1 Selected\n");
+                    return 1;
+                }
+                case 2 -> {
+                    System.out.println("Option 2 Selected\n");
+                    return 2;
+                }
+                case 3 -> {
+                    System.out.println("Option 3 Selected\n");
+                    return 3;
+                }
+                default -> {
+                    showPrompt();
+                    return -1;
+                }
             }
-
-            if (option ==3) {
-                confirmClose();
-            }
-            else
-                showMenu();
         }
         catch(InputMismatchException e) {
             System.out.println("Please enter 1, 2 or 3");
@@ -39,6 +45,7 @@ public class PrimaryMenu {
             showMenu();
         }
 
+        return -1;
     }
 
     void confirmClose() {
