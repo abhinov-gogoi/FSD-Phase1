@@ -10,7 +10,7 @@ public class Menu {
 
     // PRIMARY MENU
     private void showPrompt() {
-        System.out.println("******** PRIMARY MENU ********");
+        ASCIIArt.menu();
         System.out.println("Select any of the following: \n"+
                 "1 -> current file names\n"+
                 "2 -> More\n"+
@@ -41,18 +41,17 @@ public class Menu {
             }
         }
         catch(InputMismatchException e) {
-            System.out.println("Please enter 1, 2 or 3");
+            System.out.println("Please enter 1, 2 or 3\n");
             showMenu();
         }
         catch (Exception e){
-            System.out.println("Something went wrong");
+            System.out.println("Something went wrong\n");
             showMenu();
         }
     }
 
     // SECONDARY MENU
     private void showSecondaryPrompt() {
-        System.out.println("↳  ******** SECONDARY MENU ********");
         System.out.println("   Select any of the following: \n"+
                 "   1 -> Add a file\n"+
                 "   2 -> Delete a file\n"+
@@ -100,7 +99,7 @@ public class Menu {
             }
         }
         catch(InputMismatchException e) {
-            System.out.println("    Please enter 1, 2, 3 or 4");
+            System.out.println("   Please enter 1, 2, 3 or 4");
             showSecondaryMenu();;
         }
         catch (Exception e){
@@ -118,7 +117,7 @@ public class Menu {
 
             switch (option) {
                 case 'Y' -> {
-                    Welcome.thankYou();
+                    ASCIIArt.thankYou();
                     System.exit(0);
                 }
                 case 'N' -> {

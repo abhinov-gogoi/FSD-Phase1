@@ -3,7 +3,8 @@ public class Main {
 
         final String PATH = "src/main/resources";
 
-        Welcome.all();
+        ASCIIArt.lockedmedotcom();
+        ASCIIArt.dash();
 
         Menu menu = new Menu(PATH);
         menu.showMenu();
