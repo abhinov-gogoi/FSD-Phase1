@@ -10,7 +10,7 @@ public class PrimaryMenu {
                 "3 -> Exit");
     }
 
-    int showMenu() {
+    void showMenu() {
         showPrompt();
 
         try{
@@ -19,20 +19,21 @@ public class PrimaryMenu {
 
             switch (option){
                 case 1 -> {
-                    System.out.println("Option 1 Selected\n");
-                    return 1;
+                    // System.out.println("Option 1 Selected\n");
+                    Files files = new Files();
+                    files.displayFilesList();
+                    showMenu();
                 }
                 case 2 -> {
                     System.out.println("Option 2 Selected\n");
-                    return 2;
+                    showMenu(); // later show secondary menu
                 }
                 case 3 -> {
                     System.out.println("Option 3 Selected\n");
-                    return 3;
+                    confirmClose();
                 }
                 default -> {
                     showPrompt();
-                    return -1;
                 }
             }
         }
@@ -44,8 +45,6 @@ public class PrimaryMenu {
             System.out.println("Something went wrong");
             showMenu();
         }
-
-        return -1;
     }
 
     void confirmClose() {
@@ -59,7 +58,10 @@ public class PrimaryMenu {
                     System.out.println("Thank You for using LockedMe.com");
                     System.exit(0);
                 }
-                case 'N' -> showMenu();
+                case 'N' -> {
+                    System.out.println("You cancelled the operation");
+                    showMenu();
+                }
                 default -> {
                     System.out.println("To confirm, press Y or N");
                     confirmClose();

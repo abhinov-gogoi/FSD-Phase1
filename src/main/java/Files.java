@@ -1,16 +1,28 @@
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Files {
-    private File root;
+    private final File rootFolder;
 
     // constructor
     public Files() {
-        root = new File("src/main/resources");
+        rootFolder = new File("src/main/resources");
     }
 
     public void displayFilesList() {
-        System.out.println(Arrays.toString(root.list()));
+        String[] list = rootFolder.list();
+
+        if (list==null){
+            System.out.println("No files in the directory");
+        }
+        else {
+            System.out.println("The files in "+rootFolder+" are :");
+            Arrays.sort(list);
+            for (String str:list) {
+                System.out.println(str);
+            }
+        }
     }
 
 

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc24e73-5050-40b1-b6ae-dfe9e8c910a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Files.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/somefile1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Files.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PrimaryMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PrimaryMenu.java" afterDir="false" />
     </list>
@@ -28,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
