@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class SecondaryMenu {
 
     private void showSecondaryPrompt() {
-        System.out.println("******** SECONDARY MENU ********");
-        System.out.println("Select any of the following: \n"+
-                "1 -> Add a file\n"+
-                "2 -> Delete a file\n"+
-                "3 -> Search a file\n"+
-                "4 -> GoBack");
+        System.out.println("↳   ******** SECONDARY MENU ********");
+        System.out.println("    Select any of the following: \n"+
+                "   1 -> Add a file\n"+
+                "   2 -> Delete a file\n"+
+                "   3 -> Search a file\n"+
+                "   4 -> GoBack");
     }
 
     void showSecondaryMenu() {
@@ -21,19 +21,19 @@ public class SecondaryMenu {
 
             switch (option){
                 case 1 -> {
-                    System.out.println("Adding a file\n");
+                    System.out.println("    Adding a file\n");
                     showSecondaryMenu();
                 }
                 case 2 -> {
-                    System.out.println("Deleting a file\n");
+                    System.out.println("    Deleting a file\n");
                     showSecondaryMenu();
                 }
                 case 3 -> {
-                    System.out.println("Searching a file\n");
+                    System.out.println("    Searching a file\n");
                     showSecondaryMenu();
                 }
                 case 4 -> {
-                    System.out.println("Go Back\n");
+                    System.out.println("    Go Back\n");
                     showSecondaryMenu();
                 }
                 default -> {
@@ -42,11 +42,11 @@ public class SecondaryMenu {
             }
         }
         catch(InputMismatchException e) {
-            System.out.println("Please enter 1, 2 or 3");
+            System.out.println("    Please enter 1, 2 or 3");
             showSecondaryMenu();;
         }
         catch (Exception e){
-            System.out.println("Something went wrong");
+            System.out.println("    Something went wrong");
             showSecondaryMenu();
         }
     }
