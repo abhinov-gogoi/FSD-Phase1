@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class PrimaryMenu {
 
     private void showPrompt() {
-        System.out.println("\nSelect any of the following: \n"+
+        System.out.println("******** PRIMARY MENU ********");
+        System.out.println("Select any of the following: \n"+
                 "1 -> current file names\n"+
                 "2 -> More\n"+
                 "3 -> Exit");
@@ -20,20 +21,21 @@ public class PrimaryMenu {
             switch (option){
                 case 1 -> {
                     // System.out.println("Option 1 Selected\n");
-                    Files files = new Files();
+                    Files files = new Files("src/main/resources");
                     files.displayFilesList();
                     showMenu();
                 }
                 case 2 -> {
-                    System.out.println("Option 2 Selected\n");
-                    showMenu(); // later show secondary menu
+                    // System.out.println("Option 2 Selected\n");
+                    SecondaryMenu secondaryMenu = new SecondaryMenu();
+                    secondaryMenu.showSecondaryMenu();
                 }
                 case 3 -> {
-                    System.out.println("Option 3 Selected\n");
+                    // System.out.println("Option 3 Selected\n");
                     confirmClose();
                 }
                 default -> {
-                    showPrompt();
+                    showMenu();
                 }
             }
         }
@@ -76,6 +78,5 @@ public class PrimaryMenu {
             System.out.println("Something went wrong");
             showMenu();
         }
-
     }
 }

@@ -6,8 +6,8 @@ public class Files {
     private final File rootFolder;
 
     // constructor
-    public Files() {
-        rootFolder = new File("src/main/resources");
+    public Files(String path) {
+        rootFolder = new File(path);
     }
 
     public void displayFilesList() {
