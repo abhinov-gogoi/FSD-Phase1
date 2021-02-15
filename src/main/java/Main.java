@@ -1,8 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Welcome.showWelcome();
 
-        Menu menu = new Menu();
+        final String PATH = "src/main/resources";
+
+        Welcome.all();
+
+        Menu menu = new Menu(PATH);
         menu.showMenu();
     }
 }
