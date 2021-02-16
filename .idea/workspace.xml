@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc24e73-5050-40b1-b6ae-dfe9e8c910a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SecondaryMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15-02-2021_05_30_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15-02-2021_05_30_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ASCIIArt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ASCIIArt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
