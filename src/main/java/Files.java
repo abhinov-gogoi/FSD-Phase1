@@ -55,7 +55,7 @@ public class Files {
             return true;
         }
         else
-            System.out.println("    Delete Operation failed. No such File exist\n");
+            System.out.println("    Delete Operation failed. FILE NOT FOUND\n");
         return false;
 
 
