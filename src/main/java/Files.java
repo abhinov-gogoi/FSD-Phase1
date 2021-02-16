@@ -4,54 +4,52 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Files {
-    private final File pathname;
+    File file;
     Scanner scanner;
 
-
     // constructor
-    public Files(String pathname) {
-        this.pathname = new File(pathname);
+    public Files() {
+        this.file = new File(Main.PATHNAME);
         scanner = new Scanner(System.in);
     }
 
     public void displayFilesList() throws InterruptedException {
-        String[] list = pathname.list();
+        String[] list = file.list();
 
         if (list==null){
             System.out.println("No files in the directory");
         }
         else {
-            System.out.println("The files in "+ pathname +" are :\n");
-            Thread.sleep(700);
+            System.out.println("The files in "+ file +" are :\n");
+            Thread.sleep(100);
             Arrays.sort(list);
             for (String str:list) {
                 Thread.sleep(100);
                 System.out.println(str);
                 Thread.sleep(100);
             }
-            System.out.println("*****************************\n");
         }
     }
 
     boolean addFile(String filename) throws IOException {
-        File file = new File(pathname+"/"+filename);
+        File file = new File(this.file +"/"+filename);
 
         if (file.createNewFile()){
-            System.out.println("    File \""+filename+"\" added to "+ pathname +"\n");
+            System.out.println("    File \""+filename+"\" added to "+ this.file +"\n");
             return true;
         }
         else if(file.exists())
-            System.out.println("    File \""+filename+"\" already exists at "+ pathname +"\n");
+            System.out.println("    File \""+filename+"\" already exists at "+ this.file +"\n");
         else
             System.out.println("Something went wrong. File NOT added\n");
         return false;
     }
 
     boolean deleteFile(String filename) {
-        File file = new File(pathname+"/"+filename);
+        File file = new File(this.file +"/"+filename);
 
         if (file.delete()){
-            System.out.println("    File \""+filename+"\" deleted from "+ pathname +"\n");
+            System.out.println("    File \""+filename+"\" deleted from "+ this.file +"\n");
             return true;
         }
         else
@@ -62,10 +60,10 @@ public class Files {
     }
 
     boolean searchFile(String filename) {
-        File file = new File(pathname+"/"+filename);
+        File file = new File(this.file +"/"+filename);
 
         if(file.exists()){
-            System.out.println("    FOUND : File \""+filename+"\" exists at "+ pathname +"\n");
+            System.out.println("    FOUND : File \""+filename+"\" exists at "+ this.file +"\n");
             return true;
         }
         else

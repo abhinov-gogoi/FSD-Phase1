@@ -11,7 +11,7 @@ public class SecondaryMenu {
             "   4 -> GoBack";
 
     public SecondaryMenu() {
-        this.files = new Files(Main.PATHNAME);
+        this.files = new Files();
     }
 
     void showSecondaryMenu() {

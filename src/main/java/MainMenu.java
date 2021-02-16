@@ -11,7 +11,7 @@ public class MainMenu {
             "3 -> Exit";
 
     public MainMenu(String pathname) {
-        files = new Files(pathname);
+        files = new Files();
     }
 
     // PRIMARY MENU
