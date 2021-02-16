@@ -6,6 +6,7 @@ public class Main {
 
         System.out.println(ASCIIArt.DEVELOPED_BY_ABHINOV_GOGOI);
         System.out.println(ASCIIArt.LOCKED_ME_COM);
+        System.out.println("DIRECTORY : "+PATHNAME+"\n");
 
 
         MainMenu mainMenu = new MainMenu(PATHNAME);
