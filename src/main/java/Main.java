@@ -3,8 +3,9 @@ public class Main {
 
         final String PATHNAME = "src/main/resources";
 
-        ASCIIArt.lockedmedotcom();
-        ASCIIArt.dash();
+        System.out.println(ASCIIArt.DEVELOPED_BY_ABHINOV_GOGOI);
+        System.out.println(ASCIIArt.LOCKED_ME_COM);
+
 
         Menu menu = new Menu(PATHNAME);
         menu.showMenu();

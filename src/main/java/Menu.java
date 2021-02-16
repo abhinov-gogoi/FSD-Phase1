@@ -12,7 +12,7 @@ public class Menu {
 
     // PRIMARY MENU
     private void showPrompt() {
-        ASCIIArt.menu();
+        System.out.println(ASCIIArt.MENU);
         System.out.println("Select any of the following: \n"+
                 "1 -> current file names\n"+
                 "2 -> More\n"+
@@ -112,7 +112,7 @@ public class Menu {
 
             switch (option) {
                 case 'Y' -> {
-                    ASCIIArt.thankYou();
+                    System.out.println(ASCIIArt.THANK_YOU);
                     System.exit(0);
                 }
                 case 'N' -> {
