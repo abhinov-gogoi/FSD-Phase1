@@ -3,22 +3,19 @@ import java.util.Scanner;
 
 public class SecondaryMenu {
     Files files;
+    private static final String SECONDARY_PROMPT =
+            "   Select any of the following: \n"+
+            "   1 -> Add a file\n"+
+            "   2 -> Delete a file\n"+
+            "   3 -> Search a file\n"+
+            "   4 -> GoBack";
 
     public SecondaryMenu() {
         this.files = new Files(Main.PATHNAME);
     }
 
-    private void showSecondaryPrompt() {
-        System.out.println("   Select any of the following: \n"+
-                "   1 -> Add a file\n"+
-                "   2 -> Delete a file\n"+
-                "   3 -> Search a file\n"+
-                "   4 -> GoBack");
-    }
-
     void showSecondaryMenu() {
-        showSecondaryPrompt();
-
+        System.out.println(SECONDARY_PROMPT);
         try{
             Scanner scanner = new Scanner(System.in);
             int option = scanner.nextInt();

@@ -3,26 +3,21 @@ import java.util.Scanner;
 
 public class MainMenu {
     Files files;
-    SecondaryMenu secondaryMenu;
-    Scanner scanner;
+
+    private static final String PROMPT  =
+            "Select any of the following: \n"+
+            "1 -> current file names\n"+
+            "2 -> More\n"+
+            "3 -> Exit";
 
     public MainMenu(String pathname) {
         files = new Files(pathname);
-        scanner = new Scanner(System.in);
-        secondaryMenu = new SecondaryMenu();
     }
 
     // PRIMARY MENU
-    private void showPrompt() {
-        System.out.println(ASCIIArt.MENU);
-        System.out.println("Select any of the following: \n"+
-                "1 -> current file names\n"+
-                "2 -> More\n"+
-                "3 -> Exit");
-    }
-
     void showMenu() {
-        showPrompt();
+        System.out.println(ASCIIArt.MENU);
+        System.out.println(PROMPT);
 
         try{
             Scanner scanner = new Scanner(System.in);
@@ -34,7 +29,7 @@ public class MainMenu {
                     showMenu();
                 }
                 case 2 -> {
-                    secondaryMenu.showSecondaryMenu();
+                    new SecondaryMenu().showSecondaryMenu();
                 }
                 case 3 -> {
                     confirmClose();
