@@ -28,15 +28,9 @@ public class MainMenu {
                     files.displayFilesList();
                     showMenu();
                 }
-                case 2 -> {
-                    new SecondaryMenu().showSecondaryMenu();
-                }
-                case 3 -> {
-                    confirmClose();
-                }
-                default -> {
-                    showMenu();
-                }
+                case 2 ->  new SecondaryMenu().showSecondaryMenu();
+                case 3 -> confirmClose();
+                default -> showMenu();
             }
         }
         catch(InputMismatchException e) {
@@ -52,8 +46,7 @@ public class MainMenu {
     // CLOSE OPERATION
     private void confirmClose() {
         System.out.println("Are you sure to exit?\n (Y)->Yes    (N)->No");
-        Scanner scanner = new Scanner(System.in);
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             char option = scanner.nextLine().toUpperCase().charAt(0);
 
             switch (option) {
@@ -70,12 +63,10 @@ public class MainMenu {
                     confirmClose();
                 }
             }
-        }
-        catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Press Y or N");
             showMenu();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Something went wrong");
             showMenu();
         }

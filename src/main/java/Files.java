@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Files {
@@ -10,7 +9,7 @@ public class Files {
 
     // constructor
     public Files() {
-        this.file = new File(Main.PATHNAME);
+        this.file = new File(Main.ROOT_DIRECTORY);
         scanner = new Scanner(System.in);
     }
 

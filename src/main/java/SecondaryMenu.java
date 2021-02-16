@@ -16,11 +16,10 @@ public class SecondaryMenu {
 
     void showSecondaryMenu() {
         System.out.println(SECONDARY_PROMPT);
-        try{
-            Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
             int option = scanner.nextInt();
 
-            switch (option){
+            switch (option) {
                 case 1 -> {
                     System.out.println("   ↳ Adding a file...");
                     files.addFile(files.takeFilenameInput());
@@ -38,18 +37,14 @@ public class SecondaryMenu {
                 }
                 case 4 -> {
                     System.out.println("    Going Back\n");
-                    new MainMenu(Main.PATHNAME).showMenu();
+                    new MainMenu(Main.ROOT_DIRECTORY).showMenu();
                 }
-                default -> {
-                    showSecondaryMenu();
-                }
+                default -> showSecondaryMenu();
             }
-        }
-        catch(InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("   Please enter 1, 2, 3 or 4");
-            showSecondaryMenu();;
-        }
-        catch (Exception e){
+            showSecondaryMenu();
+        } catch (Exception e) {
             System.out.println("    Something went wrong");
             showSecondaryMenu();
         }
