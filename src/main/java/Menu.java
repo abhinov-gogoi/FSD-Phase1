@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class Menu {
     Files files;
+    Scanner scanner;
 
     public Menu(String pathname) {
         files = new Files(pathname);
+        scanner = new Scanner(System.in);
     }
 
     // PRIMARY MENU
@@ -70,7 +72,7 @@ public class Menu {
                 case 1 -> {
                     System.out.println("   ↳ Adding a file...");
                     Thread.sleep(1000);
-                    files.addFile("NEW FILE.txt");
+                    files.addFile(files.takeFilenameInput());
                     Thread.sleep(1000);
                     showSecondaryMenu();
                 }
@@ -109,7 +111,7 @@ public class Menu {
     }
 
     // CLOSE OPERATION
-    void confirmClose() {
+    private void confirmClose() {
         System.out.println("Are you sure to exit?\n (Y)->Yes    (N)->No");
         Scanner scanner = new Scanner(System.in);
         try {
@@ -139,4 +141,6 @@ public class Menu {
             showMenu();
         }
     }
+
+
 }

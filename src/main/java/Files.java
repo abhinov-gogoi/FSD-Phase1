@@ -1,12 +1,16 @@
 import java.io.File;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Files {
     private final File pathname;
+    Scanner scanner;
+
 
     // constructor
     public Files(String pathname) {
         this.pathname = new File(pathname);
+        scanner = new Scanner(System.in);
     }
 
     public void displayFilesList() throws InterruptedException {
@@ -30,6 +34,7 @@ public class Files {
 
     boolean addFile(String filename) {
         System.out.println("    File \""+filename+"\" added to "+ pathname +"\n");
+        File file = new File(pathname+"/"+filename);
         return true;
     }
 
@@ -41,6 +46,21 @@ public class Files {
     boolean searchFile(String filename) {
         System.out.println("    File \""+filename+"\" found in "+ pathname +"\n");
         return true;
+    }
+
+    public String takeFilenameInput() {
+        System.out.println("Please enter a filename : ");
+        try{
+            String filename = scanner.nextLine();
+            if (filename.equals(""))
+                return takeFilenameInput();
+            else
+                return filename;
+        }
+        catch (Exception e) {
+            System.out.println("Something went wrong");
+        }
+        return takeFilenameInput();
     }
 
 
