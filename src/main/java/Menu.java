@@ -71,28 +71,21 @@ public class Menu {
             switch (option){
                 case 1 -> {
                     System.out.println("   ↳ Adding a file...");
-                    Thread.sleep(1000);
                     files.addFile(files.takeFilenameInput());
-                    Thread.sleep(1000);
                     showSecondaryMenu();
                 }
                 case 2 -> {
                     System.out.println("   ↳ Deleting a file...");
-                    Thread.sleep(1000);
-                    files.deleteFile("NEW FILE.txt");
-                    Thread.sleep(1000);
+                    files.deleteFile(files.takeFilenameInput());
                     showSecondaryMenu();
                 }
                 case 3 -> {
                     System.out.println("   ↳ Searching a file...");
-                    Thread.sleep(1000);
-                    files.searchFile("NEW FILE.txt");
-                    Thread.sleep(1000);
+                    files.searchFile(files.takeFilenameInput());
                     showSecondaryMenu();
                 }
                 case 4 -> {
                     System.out.println("    Going Back\n");
-                    Thread.sleep(1000);
                     showMenu();
                 }
                 default -> {
@@ -141,6 +134,4 @@ public class Menu {
             showMenu();
         }
     }
-
-
 }

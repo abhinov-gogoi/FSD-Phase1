@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -32,24 +33,48 @@ public class Files {
         }
     }
 
-    boolean addFile(String filename) {
-        System.out.println("    File \""+filename+"\" added to "+ pathname +"\n");
+    boolean addFile(String filename) throws IOException {
         File file = new File(pathname+"/"+filename);
-        return true;
+
+        if (file.createNewFile()){
+            System.out.println("    File \""+filename+"\" added to "+ pathname +"\n");
+            return true;
+        }
+        else if(file.exists())
+            System.out.println("    File \""+filename+"\" already exists at "+ pathname +"\n");
+        else
+            System.out.println("Something went wrong. File NOT added\n");
+        return false;
     }
 
     boolean deleteFile(String filename) {
-        System.out.println("    File \""+filename+"\" deleted from "+ pathname +"\n");
-        return true;
+        File file = new File(pathname+"/"+filename);
+
+        if (file.delete()){
+            System.out.println("    File \""+filename+"\" deleted from "+ pathname +"\n");
+            return true;
+        }
+        else
+            System.out.println("    Delete Operation failed. No such File exist\n");
+        return false;
+
+
     }
 
     boolean searchFile(String filename) {
-        System.out.println("    File \""+filename+"\" found in "+ pathname +"\n");
-        return true;
+        File file = new File(pathname+"/"+filename);
+
+        if(file.exists()){
+            System.out.println("    FOUND : File \""+filename+"\" exists at "+ pathname +"\n");
+            return true;
+        }
+        else
+            System.out.println("    File NOT found\n");
+        return false;
     }
 
     public String takeFilenameInput() {
-        System.out.println("Please enter a filename : ");
+        System.out.print("    Please enter a filename : ");
         try{
             String filename = scanner.nextLine();
             if (filename.equals(""))
@@ -62,6 +87,5 @@ public class Files {
         }
         return takeFilenameInput();
     }
-
 
 }
