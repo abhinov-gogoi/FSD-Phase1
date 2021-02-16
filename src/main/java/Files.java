@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Files {
@@ -74,7 +75,7 @@ public class Files {
     public String takeFilenameInput() {
         System.out.print("    Please enter a filename : ");
         try{
-            String filename = scanner.nextLine();
+            String filename = scanner.nextLine().toLowerCase().trim();
             if (filename.equals(""))
                 return takeFilenameInput();
             else
