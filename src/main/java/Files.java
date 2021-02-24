@@ -22,14 +22,10 @@ public class Files {
         }
         else {
             System.out.println("The files in "+ pathname +" are :\n");
-            Thread.sleep(700);
             Arrays.sort(list);
             for (String str:list) {
-                Thread.sleep(100);
                 System.out.println(str);
-                Thread.sleep(100);
             }
-            System.out.println("*****************************\n");
         }
     }
 
@@ -57,8 +53,6 @@ public class Files {
         else
             System.out.println("    Delete Operation failed. FILE NOT FOUND\n");
         return false;
-
-
     }
 
     boolean searchFile(String filename) {

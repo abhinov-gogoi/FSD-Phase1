@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class SecondaryMenu {
     Files files;
     private static final String SECONDARY_PROMPT =
-            "   Select any of the following: \n"+
+            "   \nSelect any of the following: \n"+
             "   1 -> Add a file\n"+
             "   2 -> Delete a file\n"+
             "   3 -> Search a file\n"+
@@ -21,26 +21,26 @@ public class SecondaryMenu {
             int option = scanner.nextInt();
 
             switch (option){
-                case 1 -> {
+                case 1 : {
                     System.out.println("   ↳ Adding a file...");
                     files.addFile(files.takeFilenameInput());
                     showSecondaryMenu();
                 }
-                case 2 -> {
+                case 2 : {
                     System.out.println("   ↳ Deleting a file...");
                     files.deleteFile(files.takeFilenameInput());
                     showSecondaryMenu();
                 }
-                case 3 -> {
+                case 3 : {
                     System.out.println("   ↳ Searching a file...");
                     files.searchFile(files.takeFilenameInput());
                     showSecondaryMenu();
                 }
-                case 4 -> {
+                case 4 : {
                     System.out.println("    Going Back\n");
                     new MainMenu(Main.PATHNAME).showMenu();
                 }
-                default -> {
+                default : {
                     showSecondaryMenu();
                 }
             }
